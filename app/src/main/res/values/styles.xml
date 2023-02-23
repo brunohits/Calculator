@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttonStyle" >
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/button_text_color</item>
+
+
+    </style>
+    <style name="purpleButtonStyle" parent="buttonStyle">
+        <item name="android:background">@drawable/purple_small_button_settings</item>
+    </style>
+    <style name="pinkButtonStyle" parent="buttonStyle">
+        <item name="android:background">@drawable/pink_small_button_settings</item>
+    </style>
+    <style name="purpleBigButtonStyle" parent="buttonStyle">
+        <item name="android:background">@drawable/big_button_settings</item>
+    </style>
+</resources>

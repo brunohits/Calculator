@@ -32,23 +32,24 @@
         android:layout_marginBottom="381dp"
         android:background="@android:color/transparent"
         android:backgroundTint="@color/base"
-        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vector"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        android:foreground="?attr/selectableItemBackgroundBorderless"/>
 
     <ImageView
         android:id="@+id/Divider"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/deleteButton"
         app:srcCompat="@drawable/divider" />
@@ -56,25 +57,27 @@
     <Button
         android:id="@+id/buttonAC"
         style="@style/purpleButtonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="5dp"
+        android:background="@drawable/purple_button_settings"
         android:text="@string/ac"
         app:layout_constraintEnd_toStartOf="@+id/buttonPlusMinus"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Divider" />
 
     <Button
         android:id="@+id/buttonPlusMinus"
         style="@style/purpleButtonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="5dp"
-        android:background="@drawable/purple_small_button_settings"
+        android:background="@drawable/purple_button_settings"
         android:text="@string/plusMinus"
         app:layout_constraintEnd_toStartOf="@+id/buttonPercent"
         app:layout_constraintStart_toEndOf="@+id/buttonAC"
@@ -83,7 +86,7 @@
     <Button
         android:id="@+id/buttonPercent"
         style="@style/purpleButtonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="16dp"
@@ -96,7 +99,7 @@
     <Button
         android:id="@+id/buttonDivide"
         style="@style/pinkButtonStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="16dp"
@@ -300,5 +303,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonComma"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
+
+    <TextView
+        android:id="@+id/expressionField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="8dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/Divider"
+        app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

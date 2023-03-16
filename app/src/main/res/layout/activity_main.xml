@@ -306,19 +306,21 @@
 
     <TextView
         android:id="@+id/expressionField"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="305dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="256dp"
         android:layout_marginEnd="51dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="15dp"
         android:singleLine="true"
         android:text=""
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/Divider"
         app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

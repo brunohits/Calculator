@@ -1,6 +1,7 @@
 package com.example.androidhits
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androidhits.databinding.ActivityMainBinding
@@ -47,16 +48,24 @@ open class MainActivity : AppCompatActivity() {
         }
         binding.buttonPercent.setOnClickListener {
             if (binding.expressionField.text.isNotEmpty()) setTextFields("%")
+
         }
         binding.buttonAC.setOnClickListener {
             binding.expressionField.text = ""
+            binding.expressionField.setTextColor(Color.parseColor("#E8DEF8"))
         }
         binding.deleteButton.setOnClickListener {
             binding.expressionField.text = logic.deleteLastSymbol(binding.expressionField.text.toString())
+            if (binding.expressionField.text.isEmpty()) binding.expressionField.setTextColor(Color.parseColor("#E8DEF8"))
         }
 
         binding.buttonResult.setOnClickListener {
-            binding.expressionField.text = logic.ResultButton(binding.expressionField.text.toString())
+            if (logic.ResultButton(binding.expressionField.text.toString())=="Error") {
+                binding.expressionField.setTextColor(Color.parseColor("#F2B8B5"))
+                binding.expressionField.text =
+                    logic.ResultButton(binding.expressionField.text.toString())
+            }
+            else binding.expressionField.text=logic.ResultButton(binding.expressionField.text.toString())
         }
     }
     fun setTextFields(expression: String) {
